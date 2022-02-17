@@ -4,32 +4,32 @@ from motor_controller import MotorController
 screen = curses.initscr()
 curses.noecho()
 curses.cbreak()
-screen.keypad(True)    
+screen.keypad(True)
 
 if __name__ == '__main__':
 
     try:
 
         motorcontroller = MotorController()
-        
+
         while True:
             char = screen.getch()
             if char == ord('q'):
                 motorcontroller.stop()
                 break
-            elif char == ord('w'):            
+            elif char == ord('w'):
                 motorcontroller.moveforward()
-            elif char == ord('s'):            
+            elif char == ord('s'):
                 motorcontroller.movebackward()
-            elif char == ord('a'):            
+            elif char == ord('a'):
                 motorcontroller.moveleft()
-            elif char == ord('d'):            
+            elif char == ord('d'):
                 motorcontroller.moveright()
-            elif char == ord('e'):            
+            elif char == ord('e'):
                 motorcontroller.stop()
-            elif char == ord('z'):            
+            elif char == ord('z'):
                 motorcontroller.movehardleft()
-            elif char == ord('c'):            
+            elif char == ord('c'):
                 motorcontroller.movehardright()
             elif char == ord('1'):
                 motorcontroller.setmotorspeed(20)
@@ -46,6 +46,11 @@ if __name__ == '__main__':
             elif char == ord('.'):
                 motorcontroller.offsetmotorspeed(+5)
 
+    except Exception as err:
+        print(err.args[0])
+
     finally:
-        curses.nocbreak(); screen.keypad(0); curses.echo()
+        curses.nocbreak()
+        screen.keypad(0)
+        curses.echo()
         curses.endwin()
