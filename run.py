@@ -1,3 +1,4 @@
+import RPi.GPIO as GPIO
 import curses
 from motor_controller import MotorController
 
@@ -6,14 +7,48 @@ curses.noecho()
 curses.cbreak()
 screen.keypad(True)
 
+fl_motor_pwm_pin = 23
+fl_motor_in1 = 29
+fl_motor_in2 = 31
+fr_motor_in3 = 33
+fr_motor_in4 = 35
+fr_motor_pwm_pin = 37
+
+bl_motor_pwm_pin = 24
+bl_motor_in1 = 26
+bl_motor_in2 = 32
+br_motor_in3 = 36
+br_motor_in4 = 38
+br_motor_pwm_pin = 40
+
+
 if __name__ == '__main__':
 
     try:
+
+        print('program started')
+
+        GPIO.setmode(GPIO.BOARD)
+        GPIO.setup(fl_motor_pwm_pin, GPIO.OUT)
+        GPIO.setup(fr_motor_pwm_pin, GPIO.OUT)
+        GPIO.setup(fl_motor_in1, GPIO.OUT)
+        GPIO.setup(fl_motor_in2, GPIO.OUT)
+        GPIO.setup(fr_motor_in3, GPIO.OUT)
+        GPIO.setup(fr_motor_in4, GPIO.OUT)
+        GPIO.setup(bl_motor_pwm_pin, GPIO.OUT)
+        GPIO.setup(br_motor_pwm_pin, GPIO.OUT)
+        GPIO.setup(bl_motor_in1, GPIO.OUT)
+        GPIO.setup(bl_motor_in2, GPIO.OUT)
+        GPIO.setup(br_motor_in3, GPIO.OUT)
+        GPIO.setup(br_motor_in4, GPIO.OUT)
 
         motorcontroller = MotorController()
 
         while True:
             char = screen.getch()
+
+            print(char)
+
             if char == ord('q'):
                 motorcontroller.stop()
                 break
