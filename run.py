@@ -53,6 +53,7 @@ if __name__ == '__main__':
                 motorcontroller.stop()
                 break
             elif char == ord('w'):
+                print('forward')
                 motorcontroller.moveforward()
             elif char == ord('s'):
                 motorcontroller.movebackward()
