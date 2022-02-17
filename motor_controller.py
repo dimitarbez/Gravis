@@ -89,7 +89,7 @@ class MotorController:
         GPIO.output(br_motor_in4, GPIO.LOW)
 
 
-    def moveleft(self):
+    def moveright(self):
         GPIO.output(fl_motor_in1, GPIO.LOW)
         GPIO.output(fl_motor_in2, GPIO.LOW)
         GPIO.output(fr_motor_in3, GPIO.LOW)
@@ -101,7 +101,7 @@ class MotorController:
         GPIO.output(br_motor_in4, GPIO.HIGH)
 
 
-    def moveright(self):
+    def moveleft(self):
         GPIO.output(fl_motor_in1, GPIO.LOW)
         GPIO.output(fl_motor_in2, GPIO.HIGH)
         GPIO.output(fr_motor_in3, GPIO.LOW)
@@ -113,7 +113,7 @@ class MotorController:
         GPIO.output(br_motor_in4, GPIO.LOW)
 
 
-    def movehardleft(self):
+    def movehardright(self):
         GPIO.output(fl_motor_in1, GPIO.HIGH)
         GPIO.output(fl_motor_in2, GPIO.LOW)
         GPIO.output(fr_motor_in3, GPIO.LOW)
@@ -125,7 +125,7 @@ class MotorController:
         GPIO.output(br_motor_in4, GPIO.HIGH)
 
 
-    def movehardright(self):
+    def movehardleft(self):
         GPIO.output(fl_motor_in1, GPIO.LOW)
         GPIO.output(fl_motor_in2, GPIO.HIGH)
         GPIO.output(fr_motor_in3, GPIO.HIGH)
