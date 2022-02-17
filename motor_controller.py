@@ -1,15 +1,15 @@
 import RPi.GPIO as GPIO
 
 
-fl_motor_pwm_pin = 27
+fl_motor_pwm_pin = 23
 fl_motor_in1 = 29
 fl_motor_in2 = 31
 fr_motor_in3 = 33
 fr_motor_in4 = 35
 fr_motor_pwm_pin = 37
 
-bl_motor_pwm_pin = 26
-bl_motor_in1 = 28
+bl_motor_pwm_pin = 24
+bl_motor_in1 = 26
 bl_motor_in2 = 32
 br_motor_in3 = 36
 br_motor_in4 = 38
