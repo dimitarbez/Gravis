@@ -1,6 +1,9 @@
 import RPi.GPIO as GPIO
 import curses
 from motor_controller import MotorController
+from picamera import PiCamera
+from datetime import datetime
+
 
 screen = curses.initscr()
 curses.noecho()
@@ -44,16 +47,18 @@ if __name__ == '__main__':
 
         motorcontroller = MotorController()
 
+        camera = PiCamera()
+        camera.rotation = 0
+        
+        camera.start_preview(fullscreen=False, window=(200,-100,600,800))
+
         while True:
             char = screen.getch()
-
-            print(char)
 
             if char == ord('q'):
                 motorcontroller.stop()
                 break
             elif char == ord('w'):
-                print('forward')
                 motorcontroller.moveforward()
             elif char == ord('s'):
                 motorcontroller.movebackward()
@@ -81,6 +86,14 @@ if __name__ == '__main__':
                 motorcontroller.offsetmotorspeed(-5)
             elif char == ord('.'):
                 motorcontroller.offsetmotorspeed(+5)
+            elif char == ord('+'):
+                camera.zoom = (0.25, 0.25, 0.5, 0.5)
+            elif char == ord('-'):
+                camera.zoom = (0, 0, 1, 1)
+            elif char == ord('t'):
+                now = datetime.now()
+                dt_string = now.strftime("%d%m%Y-%H%M%S")
+                camera.capture('./robot_images/robot_%s.jpg' % dt_string)
 
     except Exception as err:
         print(err.args[0])
@@ -90,3 +103,4 @@ if __name__ == '__main__':
         screen.keypad(0)
         curses.echo()
         curses.endwin()
+        camera.stop_preview()
