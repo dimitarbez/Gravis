@@ -15,6 +15,7 @@ Project is still being planned so I will post updates on it regularly. The end g
   - [Github repository for my Ricardo robot](https://github.com/dimitarbez/Ricardo)
 
 ## Part list
+  > **The product links are the places where I ordered the parts from**
   - NVIDIA Jetson Nano 2GB
   - Raspberry Pi 4 2GB
   - TS400 Robot chassis | [Product link](https://www.aliexpress.com/item/32966785172.html?spm=a2g0o.9042311.0.0.27424c4do5r4TH)
