@@ -12,3 +12,4 @@ Project is still being planned so I will post updates on it regularly. The end g
   - [My LinkedIn Account](https://www.linkedin.com/in/dimitar-bezhanovski/)
   - [My Twitter Account](https://twitter.com/bezhanovski)
   - [The Making Robots Subreddit](https://www.reddit.com/r/makingrobots/)
+  - [Github repository for my Ricardo robot](https://github.com/dimitarbez/Ricardo)
