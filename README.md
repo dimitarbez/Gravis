@@ -1,5 +1,5 @@
 # Gravis
-> **Project in development**
+> **Project in development, more documentation and code to be added**
 
 ![Gravis](https://github.com/dimitarbez/Gravis/blob/main/images/gravis2.jpg?raw=true)
 
