@@ -9,10 +9,8 @@ Gravis is an open-source robot which aim is to make replicating it an easy and f
 ## Project roadmap
 Project is still being planned so I will post updates on it regularly. The end goal is to have everything open-source, including the 3d printable parts. Soon there will be ML models on this github repository that will utilize Gravis' camera.
   ### Links for social media related to this project ###
-  - [My LinkedIn Account](https://www.linkedin.com/in/dimitar-bezhanovski/)
-  - [My Twitter Account](https://twitter.com/bezhanovski)
   - [The Making Robots Subreddit](https://www.reddit.com/r/makingrobots/)
-  - [Github repository for my Ricardo robot](https://github.com/dimitarbez/Ricardo)
+  - [Github repository for the Ricardo robot](https://github.com/dimitarbez/Ricardo)
 
 ## Part list
   > **The product links are the places where I ordered the parts from**
