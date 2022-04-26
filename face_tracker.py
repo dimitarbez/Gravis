@@ -1,5 +1,5 @@
 # import required libraries
-from .motor_controller import MotorController
+from motor_controller import MotorController
 import time
 import cv2 as cv
 import numpy as np
@@ -20,13 +20,13 @@ rawCapture = PiRGBArray(camera, size=(400, 300))
 
 # set the distance between the edge of the screen
 # and the borders that trigger robot rotation
-side_borders_distance = 150
+side_borders_distance = 120
 
 # face tracking area thresholds are used for forward/backward movement of the robot
 # max square area threshold for face tracking
-max_face_tracking_area = 1600
+max_face_tracking_area = 90
 # min square area threshold for face tracking
-min_face_tracking_area = 1400
+min_face_tracking_area = 50
 
 tracked_face_color = (0, 255, 0)
 side_border_color = (0, 0, 255)
@@ -41,7 +41,7 @@ for still in camera.capture_continuous(rawCapture, format="bgr", use_video_port=
     image = still.array
     gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
     faces = faceCascade.detectMultiScale(
-        image,
+        gray,
         scaleFactor=1.1,
         minNeighbors=5,
         minSize=(30, 30),
@@ -66,7 +66,7 @@ for still in camera.capture_continuous(rawCapture, format="bgr", use_video_port=
             # interpolate motor speed from left side border to left edge of screen
             left_motorspeed = ((x - side_borders_distance)
                                * (-100) / (side_borders_distance))
-            left_motorspeed = np.clip(left_motorspeed, 35, 80)
+            left_motorspeed = np.clip(left_motorspeed, 15, 80)
             print(left_motorspeed)
             motor_controller.setmotorspeed(left_motorspeed)
             motor_controller.movehardleft()
@@ -77,7 +77,7 @@ for still in camera.capture_continuous(rawCapture, format="bgr", use_video_port=
             # interpolate motor speed from right side border to right edge of screen
             right_motorspeed = (
                 ((x + w) - (image.shape[1] - side_borders_distance)) * 100) / side_borders_distance
-            right_motorspeed = np.clip(right_motorspeed, 35, 80)
+            right_motorspeed = np.clip(right_motorspeed, 15, 80)
             print(right_motorspeed)
             motor_controller.setmotorspeed(right_motorspeed)
             motor_controller.movehardright()
@@ -85,7 +85,7 @@ for still in camera.capture_continuous(rawCapture, format="bgr", use_video_port=
 
         elif (object_in_left_area and object_in_right_area) or not (object_in_left_area and object_in_right_area):
             print('center')
-            area = (w ** 2)
+            area = w
             print(area)
             if area > max_face_tracking_area:
                 print('move backward')
