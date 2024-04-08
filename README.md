@@ -1,25 +1,75 @@
 # Gravis
-> **Project in development, more documentation and code to be added**
 
-![Gravis](https://github.com/dimitarbez/Gravis/blob/main/images/gravis2.jpg?raw=true)
+> **🚧 Project in Development: More documentation and updates coming soon!**
 
-## Introduction (project still in development)
-Gravis is an open-source robot with the aim to make replicating it an easy and fun process, so that anyone who is interested in robotics can get into the field and progress. Parts of Gravis are 3D printable, except for the chassis which is premade (link for it will be provided). The electronics are all readily available and relatively cheap such as the Raspberry Pi, Jetson Nano and other Arduino modules which make upgrading and repairing him an easy process. This document will contain a guide on all of the parts and how they are connected, so that you can easily start making your own Gravis. The README file shall be updated consistently with new changes and it is the documentation for the entire project.
+![Gravis Robot Chassis](https://github.com/42dotmk/Gravis/assets/30288047/844e40d8-6557-4429-ae0f-7ff86c949bb5)
 
-## Project roadmap
-The project is still being planned so I will post updates on it regularly. The end goal is to have everything open-source, including the 3d printable parts. Soon there will be ML models on this github repository that will utilize Gravis' camera.
-  ### Links for social media related to this project ###
-  - [The Making Robots Subreddit](https://www.reddit.com/r/makingrobots/)
-  - [Github repository for the Ricardo robot](https://github.com/dimitarbez/Ricardo)
+## 🌟 Introduction
 
-## Part list
-  > **The product links are the places where I ordered the parts from**
-  - NVIDIA Jetson Nano 2GB
-  - Raspberry Pi 4 2GB
-  - TS400 Robot chassis | [Product link](https://www.aliexpress.com/item/32966785172.html?spm=a2g0o.9042311.0.0.27424c4do5r4TH)
-  - Slamtec RPLidar A1M8R6 | [Product link](https://www.dfrobot.com/product-1125.html)
-  - 2x L298N Motor controller | [Product link](https://www.aliexpress.com/item/33012645746.html?spm=a2g0o.9042311.0.0.27424c4dGmtTvO)
-  - 3x 18650 3.7V Li-ion batteries
-  - MPU6050 Accelerometer and Gyroscope | [Product link](https://www.aliexpress.com/item/32340949017.html?spm=a2g0o.productlist.0.0.a95832a5qxBww1&algo_pvid=981da1eb-5f62-4149-9e9a-a396d7ae606d&algo_exp_id=981da1eb-5f62-4149-9e9a-a396d7ae606d-0&pdp_ext_f=%7B%22sku_id%22%3A%2210000000609322940%22%7D&pdp_pi=-1%3B1.16%3B-1%3B-1%40salePrice%3BUSD%3Bsearch-mainSearch)
-  - 2x 9g Servo motor (for the camera holder) | [Product link](https://www.aliexpress.com/item/4000903734519.html?spm=a2g0o.productlist.0.0.421a5deaZENHVL&algo_pvid=67ecde94-4cdf-4ab3-bc57-f7a76f9d21d8&algo_exp_id=67ecde94-4cdf-4ab3-bc57-f7a76f9d21d8-1&pdp_ext_f=%7B%22sku_id%22%3A%2212000021325362154%22%7D&pdp_pi=-1%3B5.19%3B-1%3B-1%40salePrice%3BUSD%3Bsearch-mainSearch)
-  - Raspberry Pi Camera v1.3 | [Product link](https://www.aliexpress.com/item/32988983058.html?spm=a2g0o.productlist.0.0.d2c6601dINeh3L&algo_pvid=2dc3068e-94cb-4ead-babf-3f1e0dea7f04&algo_exp_id=2dc3068e-94cb-4ead-babf-3f1e0dea7f04-0&pdp_ext_f=%7B%22sku_id%22%3A%2266896320728%22%7D&pdp_pi=-1%3B4.15%3B-1%3B-1%40salePrice%3BUSD%3Bsearch-mainSearch)
+Gravis is an open-source robot designed to democratize robotics, making it accessible for enthusiasts and professionals alike. With parts that are mostly 3D printable and standard, easily-sourced electronics, Gravis is not just a robot; it's a platform for innovation and education in the field of robotics.
+
+### Why Gravis?
+
+- **Open Source**: Every aspect of Gravis, from hardware designs to software algorithms, is open for you to tweak, improve, and share.
+- **Educational**: Whether you're a beginner or an expert, building and programming Gravis offers invaluable hands-on experience.
+- **Customizable**: Thanks to its modular design, Gravis can be adapted for a wide range of applications and upgrades.
+
+## 🛠 Project Roadmap
+
+While Gravis is currently under active development, our vision is clear: To provide a fully open-source robotics platform that's both powerful and easy to use. Stay tuned for:
+
+- 3D printable parts designs
+- Integration with machine learning for advanced functionalities
+- Regular project updates and community contributions
+
+### Stay Connected
+
+Join our journey and connect with the robotics community:
+- [Making Robots Subreddit](https://www.reddit.com/r/makingrobots/)
+- [Ricardo Robot GitHub Repository](https://github.com/dimitarbez/Ricardo) for inspiration
+
+## 📦 Part List
+
+Here's a breakdown of Gravis's components. These parts were chosen for their balance of performance, cost, and availability:
+
+- **Core Electronics**:
+  - Raspberry Pi 4 (2GB) | [Buy on Raspberry Pi](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/)
+  - Arduino Mega R3 2560 | [Buy on Arduino](https://store.arduino.cc/usa/mega-2560-r3)
+  - 3S LiPo Battery | [Example on HobbyKing](https://hobbyking.com/)
+- **Sensors and Actuators**:
+  - Slamtec RPLidar A1M8R6 | [Buy on DFRobot](https://www.dfrobot.com/product-1125.html)
+  - DHT22 Temperature Sensor | [Buy on Adafruit](https://www.adafruit.com/product/385)
+  - MPU6050 Accelerometer and Gyroscope | [Buy on SparkFun](https://www.sparkfun.com/products/11028)
+  - 2x 9g Servo Motors (Camera Holder) | [Buy on ServoCity](https://www.servocity.com/servos)
+  - Raspberry Pi Camera v1.3 | [Buy on Raspberry Pi](https://www.raspberrypi.org/products/camera-module-v2/)
+- **Motion and Power**:
+  - TS400 Robot Chassis | [Find similar on RobotShop](https://www.robotshop.com/)
+  - 2x L298N Motor Controllers | [Buy on Amazon](https://www.amazon.com/s?k=L298N+Motor+Driver)
+  - DC5V WS2812B Individually Addressable LED Strip | [Buy on AliExpress](https://www.aliexpress.com/item/32682015405.html)
+  - Stepdown Voltage Converter (12V-5V) | [Buy on AliExpress](https://www.aliexpress.com/item/33037061522.html)
+  - 10W+10W PAM8610 Class D Dual-channel Audio Amplifier Board | [Buy on AliExpress](https://www.aliexpress.com/item/32612268830.html)
+- **Audio-Visual**:
+  - 2x AIYIMA 40MM Mini Speakers | [Buy on AliExpress](https://www.aliexpress.com/item/32836767822.html)
+  - Raspberry Pi Camera v1.3 | [Buy on Raspberry Pi](https://www.raspberrypi.org/products/camera-module-v2/)
+
+### Where to Buy
+
+For your convenience, product links are included to help you find and order parts easily. Note that some links lead to general stores where similar parts can be found if the exact model isn't available.
+
+## 📝 Documentation & Getting Started
+
+In-depth documentation, including assembly instructions, software setup, and usage tutorials, will be provided as the project progresses. Our goal is to make setting up Gravis as straightforward as possible.
+
+## 🤝 Contributing
+
+
+
+Gravis thrives on community contributions! Whether it's by reporting issues, proposing new features, or submitting pull requests, your help in making Gravis better is invaluable.
+
+## 📄 License
+
+Gravis is committed to remaining free and open-source. Further details on the licensing will be updated shortly.
+
+## 🎉 Acknowledgments
+
+A huge shout-out to the global robotics and open-source communities! Your passion, creativity, and spirit of collaboration make ambitious projects like Gravis possible.
