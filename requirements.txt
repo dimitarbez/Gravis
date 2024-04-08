@@ -1,0 +1,5 @@
+numpy==1.21.6
+opencv-python==4.7.0.72
+pynput==1.7.6
+pyrplidar==0.1.2
+pyserial==3.5
